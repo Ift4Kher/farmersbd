@@ -1,0 +1,16 @@
+{
+  "name": "farmersbd",
+  "version": "1.0.0",
+  "description": "FarmersBD is a complete, secure, responsive, multi-page Bangladeshi web application designed for smart fish farming. It combines AI-powered fish disease detection, fish species knowledge, aqua product e-commerce, expert consultations, educational blogs, user account dashboards, and a complete admin control panel.",
+  "main": "check_layout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "jsdom": "^30.0.1"
+  }
+}

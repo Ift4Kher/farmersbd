@@ -1,0 +1,441 @@
+/* =========================================
+   FarmersBD — Checkout Page UI
+   Matches reference design exactly
+   ========================================= */
+
+/* ── Checkout Header ── */
+.co-header {
+    background: linear-gradient(105deg, #e0f2fe 0%, #ccfbf1 100%);
+    padding: 2.5rem 0 3.5rem 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -2rem; /* Overlap effect for cards */
+}
+/* Leaf pattern/bubbles background decoration */
+.co-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255,255,255,0.4) 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+/* Decorative Fish on right */
+.co-header-decor {
+    position: absolute;
+    right: 0;
+    bottom: -1rem;
+    height: 100%;
+    width: 400px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150"><path d="M350 40c-20-10-40 0-50 10-10 10-30 10-40 0-10-10-20-20-40-20s-40 10-50 20c-10 10-30 10-40 0-10-10-20-20-40-20s-40 10-50 20c-10 10-30 10-40 0V150h400V40z" fill="rgba(255,255,255,0.2)"/><path d="M380 60c-20-10-40 0-50 10-10 10-30 10-40 0-10-10-20-20-40-20s-40 10-50 20c-10 10-30 10-40 0-10-10-20-20-40-20s-40 10-50 20V150h400V60z" fill="rgba(2,132,199,0.05)"/></svg>') no-repeat bottom right;
+    pointer-events: none;
+}
+.co-header-slogan {
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0369a1;
+    font-style: italic;
+    font-family: 'AdorshoLipi', sans-serif;
+    transform: rotate(-3deg);
+    opacity: 0.8;
+}
+
+.co-breadcrumb {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+.co-breadcrumb a {
+    color: #0284c7;
+    text-decoration: none;
+}
+.co-breadcrumb span {
+    color: #64748b;
+}
+
+.co-header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+.co-header-subtitle {
+    font-size: 1rem;
+    color: #334155;
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Main Layout ── */
+.co-main-wrapper {
+    position: relative;
+    z-index: 5;
+}
+
+/* ── Form Card (Left) ── */
+.co-form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2ecf3;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.co-step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.co-step-num {
+    width: 36px;
+    height: 36px;
+    background: #0284c7;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+.co-step-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.2rem;
+}
+.co-step-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* ── Input Fields with Icons ── */
+.co-form-group {
+    margin-bottom: 1.25rem;
+}
+.co-form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+.co-form-group label .text-danger {
+    color: #ef4444;
+}
+.co-input-wrapper {
+    position: relative;
+}
+.co-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+textarea ~ .co-input-icon {
+    top: 1rem;
+    transform: none;
+}
+.co-input-wrapper .form-control,
+.co-input-wrapper .form-select {
+    padding-left: 2.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background: #ffffff;
+    box-shadow: none;
+    transition: all 0.2s;
+}
+.co-input-wrapper textarea.form-control {
+    padding-top: 0.85rem;
+}
+.co-input-wrapper .form-control:focus,
+.co-input-wrapper .form-select:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+.co-input-wrapper .form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Collapsed Step 2 Styling */
+.co-step2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+.co-step2-header .co-step-header {
+    margin-bottom: 0;
+}
+.co-step2-chevron {
+    color: #0284c7;
+}
+
+/* Payment Method Cards (Custom for Step 2 when open) */
+.co-payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.payment-card {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s;
+}
+.payment-card:hover {
+    border-color: #0284c7;
+}
+.payment-card input[type="radio"] {
+    display: none;
+}
+.payment-card.selected {
+    border-color: #0284c7;
+    background: #f0f9ff;
+}
+.payment-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2ecf3;
+}
+.payment-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ── Order Summary Card (Right) ── */
+.co-summary-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2ecf3;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+.co-summary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    padding: 1.25rem 1.5rem;
+    background: #f0f9ff;
+    border-bottom: 1px solid #e2ecf3;
+    margin-bottom: 0;
+}
+.co-summary-header svg {
+    color: #0284c7;
+}
+.co-summary-body {
+    padding: 1.5rem;
+}
+
+.co-item-list {
+    margin-bottom: 1.5rem;
+}
+.co-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2ecf3;
+}
+.co-item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    padding: 2px;
+    object-fit: contain;
+}
+.co-item-details {
+    flex: 1;
+}
+.co-item-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.1rem;
+}
+.co-item-qty {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+.co-item-price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.co-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #475569;
+}
+.co-summary-row:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.co-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+    margin-bottom: 1.5rem;
+}
+.co-summary-total span:first-child {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+.co-summary-total span:last-child {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #007bff;
+}
+
+.btn-co-confirm {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+}
+.btn-co-confirm:hover {
+    background: #0069d9;
+}
+
+.co-divider {
+    text-align: center;
+    position: relative;
+    margin: 1rem 0;
+}
+.co-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #cbd5e1;
+}
+.co-divider::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #cbd5e1;
+}
+.co-divider span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    background: #f8fafc;
+    padding: 0 0.5rem;
+}
+
+.btn-co-return {
+    width: 100%;
+    background: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+.btn-co-return:hover {
+    background: #f0f9ff;
+    color: #0056b3;
+}
+
+.co-security-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    color: #166534;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.co-security-badge svg {
+    color: #22c55e;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .co-header-slogan {
+        display: none;
+    }
+    .co-header-decor {
+        opacity: 0.3;
+    }
+}
+@media (max-width: 767.98px) {
+    .co-payment-grid {
+        grid-template-columns: 1fr;
+    }
+}

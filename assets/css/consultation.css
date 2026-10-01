@@ -1,0 +1,770 @@
+/* ============================================================
+   FarmersBD — Expert Consultation Overview Page Stylesheet
+   Matches exact reference UI
+   ============================================================ */
+
+/* ── Hero Banner ────────────────────────────────────────── */
+.consult-hero-card {
+    background-color: #032a36;
+    background-image: 
+        linear-gradient(90deg, #032a36 0%, #043f4f 42%, rgba(4, 63, 79, 0.8) 60%, rgba(2, 132, 199, 0.15) 100%),
+        url('../images/general/consult_hero_fish_right.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 20px;
+    padding: 3rem 2.8rem 2.5rem;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 10px 30px rgba(3, 42, 54, 0.15);
+}
+
+.consult-badge {
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 0.38rem 1.1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 10px rgba(13, 148, 136, 0.3);
+}
+
+.consult-hero-title {
+    font-size: 2.35rem;
+    font-weight: 800;
+    line-height: 1.28;
+    color: #ffffff;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.4px;
+}
+
+.consult-hero-highlight {
+    color: #38bdf8;
+    display: block;
+}
+
+.consult-hero-desc {
+    font-size: 0.96rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.65;
+    max-width: 520px;
+    margin-bottom: 1.75rem;
+}
+
+.btn-consult-primary {
+    background: #0284c7;
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.4);
+    transition: all 0.25s ease;
+}
+
+.btn-consult-primary:hover {
+    background: #0369a1;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+}
+
+/* Feature Badges Strip */
+.consult-features-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.2rem;
+}
+
+.consult-feature-badge {
+    background: rgba(3, 37, 47, 0.75);
+    border: 1.2px solid rgba(14, 165, 233, 0.25);
+    border-radius: 14px;
+    padding: 0.55rem 1.1rem 0.55rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    backdrop-filter: blur(8px);
+}
+
+.consult-feat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0891b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.consult-feat-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.consult-feat-sub {
+    font-size: 0.74rem;
+    color: #94a3b8;
+    line-height: 1.2;
+}
+
+/* ── Section Title ──────────────────────────────────────── */
+.consult-section-header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.consult-section-accent-bar {
+    width: 42px;
+    height: 4px;
+    background: #0d9488;
+    border-radius: 4px;
+    margin: 0 auto 0.75rem;
+}
+
+.consult-section-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.3px;
+}
+
+.consult-section-subtitle {
+    color: #64748b;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+/* ── Step Cards Grid ────────────────────────────────────── */
+.consult-step-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1.2px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+    padding: 1.6rem 1.4rem 1.6rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.consult-step-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2, 132, 199, 0.1);
+    border-color: #bae6fd;
+}
+
+.consult-step-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.consult-step-top {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+}
+
+.consult-step-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.consult-step-pill {
+    font-size: 0.76rem;
+    font-weight: 800;
+    padding: 0.22rem 0.65rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Step 1 Styles (Blue) */
+.step-blue .consult-step-icon-box {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+.step-blue .consult-step-pill {
+    background: #f0f9ff;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+}
+.step-btn-blue {
+    background: transparent;
+    color: #0284c7;
+    font-size: 0.86rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+.step-btn-blue .step-circle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #0284c7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+.step-btn-blue:hover {
+    color: #0369a1;
+}
+.step-btn-blue:hover .step-circle-icon {
+    transform: translateX(3px);
+}
+
+/* Step 2 Styles (Deep Teal) */
+.step-teal .consult-step-icon-box,
+.step-green .consult-step-icon-box {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+.step-teal .consult-step-pill,
+.step-green .consult-step-pill {
+    background: #f0fdfa;
+    color: #0d9488;
+    border: 1px solid #99f6e4;
+}
+.step-btn-teal,
+.step-btn-green {
+    background: transparent;
+    color: #0d9488;
+    font-size: 0.86rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+.step-btn-teal .step-circle-icon,
+.step-btn-green .step-circle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #ccfbf1;
+    color: #0d9488;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+.step-btn-teal:hover,
+.step-btn-green:hover {
+    color: #0f766e;
+}
+.step-btn-teal:hover .step-circle-icon,
+.step-btn-green:hover .step-circle-icon {
+    transform: translateX(3px);
+}
+
+/* Step 3 Styles (Purple) */
+.step-purple .consult-step-icon-box {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+.step-purple .consult-step-pill {
+    background: #faf5ff;
+    color: #9333ea;
+    border: 1px solid #e9d5ff;
+}
+.step-btn-purple {
+    background: transparent;
+    color: #9333ea;
+    font-size: 0.86rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
+.step-btn-purple .step-circle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #f3e8ff;
+    color: #9333ea;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+.step-btn-purple:hover {
+    color: #7e22ce;
+}
+.step-btn-purple:hover .step-circle-icon {
+    transform: translateX(3px);
+}
+
+.consult-step-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.45rem;
+}
+
+.consult-step-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.15rem;
+}
+
+.consult-step-img-wrap {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.consult-step-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ── Bottom CTA Banner ──────────────────────────────────── */
+.consult-cta-banner {
+    background: linear-gradient(90deg, #0284c7 0%, #0369a1 100%);
+    background-image: linear-gradient(90deg, #0284c7 0%, #0369a1 100%), url('../images/general/footer_bg_fish.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 20px;
+    padding: 1.8rem 2.4rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3.5rem;
+    box-shadow: 0 10px 30px rgba(2, 132, 199, 0.25);
+}
+
+.consult-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.consult-cta-headset {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.consult-cta-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.25rem;
+}
+
+.consult-cta-sub {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+}
+
+.consult-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.btn-cta-white {
+    background: #ffffff;
+    color: #0284c7;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 0.6rem 1.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.2s ease;
+}
+
+.btn-cta-white:hover {
+    background: #f0f9ff;
+    color: #0369a1;
+    transform: translateY(-2px);
+}
+
+.btn-cta-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 0.58rem 1.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-cta-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+/* ── Direct Contact Channels Section (Exact Mockup) ──────── */
+.consult-direct-contact-section {
+    margin-top: 3.8rem;
+}
+
+.consult-contact-card {
+    background: #f0fdf9;
+    border: 1.5px solid #ccfbf1;
+    border-radius: 22px;
+    padding: 2.2rem 2rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(13, 148, 136, 0.04);
+}
+
+.contact-pill-badge {
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.95rem;
+    width: fit-content;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.25);
+}
+
+.contact-card-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.45rem;
+    letter-spacing: -0.3px;
+}
+
+.contact-card-title .text-teal {
+    color: #0d9488;
+}
+
+.contact-card-desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.contact-channel-item {
+    background: #ffffff;
+    border: 1.2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.15rem 1rem 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.95rem;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.contact-channel-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(2, 132, 199, 0.08);
+    border-color: #bae6fd;
+}
+
+.channel-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.channel-icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.channel-icon-circle.bg-teal,
+.channel-icon-circle.bg-green { background: #0d9488; }
+.channel-icon-circle.bg-whatsapp { background: #25d366; }
+.channel-icon-circle.bg-blue { background: #0284c7; }
+.channel-icon-circle.bg-purple { background: #7c3aed; }
+
+.channel-name {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 0.2rem;
+}
+
+.channel-sub {
+    font-size: 0.72rem;
+    color: #64748b;
+    line-height: 1.35;
+}
+
+.channel-pill-link {
+    border-radius: 50px;
+    padding: 0.42rem 0.8rem;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.channel-pill-link.pill-teal,
+.channel-pill-link.pill-green {
+    background: #ccfbf1;
+    color: #0d9488;
+}
+.channel-pill-link.pill-whatsapp {
+    background: #ecfdf5;
+    color: #16a34a;
+}
+.channel-pill-link.pill-blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+.channel-pill-link.pill-purple {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.channel-pill-link:hover {
+    transform: scale(1.02);
+    filter: brightness(0.95);
+}
+
+/* Fast Support Agent Card (Right side) */
+.consult-support-agent-card {
+    background: linear-gradient(135deg, #007d99 0%, #005d73 50%, #004252 100%);
+    border-radius: 22px;
+    height: 100%;
+    min-height: 240px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 58, 77, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 1.6rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.consult-support-agent-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(0, 58, 77, 0.35);
+}
+
+.consult-support-content {
+    position: relative;
+    z-index: 2;
+    max-width: 68%;
+}
+
+.consult-support-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.consult-support-title {
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.consult-support-sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.4;
+}
+
+.consult-support-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 0.45rem 1rem 0.45rem 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 100%;
+}
+
+.consult-support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+}
+
+.consult-support-btn .btn-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #e6f7f2;
+    color: #059669;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.consult-support-btn .btn-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.consult-support-btn .phone-num {
+    color: #065f46;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.consult-support-btn .phone-label {
+    color: #059669;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.consult-support-btn .btn-arrow {
+    color: #059669;
+    font-size: 1.1rem;
+    margin-left: auto;
+}
+
+.consult-support-agent-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+    .consult-hero-card {
+        padding: 2.2rem 1.8rem;
+    }
+    .consult-hero-title {
+        font-size: 1.85rem;
+    }
+    .consult-step-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .consult-step-img-wrap {
+        align-self: center;
+        margin-top: 1rem;
+    }
+    .consult-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.6rem;
+    }
+    .consult-support-agent-card {
+        padding: 2rem 1.5rem;
+    }
+    .support-agent-content {
+        max-width: 100%;
+    }
+    .support-agent-photo {
+        display: none;
+    }
+}

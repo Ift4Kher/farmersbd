@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3f6212" />
+      <stop offset="50%" stop-color="#65a30d" />
+      <stop offset="100%" stop-color="#a3e635" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+
+  <g filter="url(#shadow)" transform="translate(40, 20)">
+    <!-- Rounded Tail -->
+    <path d="M 590 230 C 650 170 710 180 710 230 C 710 280 650 290 590 230 Z" fill="#365314" opacity="0.9" />
+
+    <!-- Spiny Back Fin -->
+    <path d="M 280 140 L 560 160 L 540 210 Z" fill="#1a2e05" opacity="0.85" />
+
+    <!-- Compact Oblong Body -->
+    <path d="M 130 220 C 160 140 320 130 520 180 C 590 200 600 230 590 235 C 570 250 500 310 340 310 C 180 310 140 270 130 220 Z" fill="url(#bodyGrad)" />
+
+    <!-- Dark Gill Spot (Characteristic of Koi / Anabas) -->
+    <circle cx="230" cy="225" r="14" fill="#0f172a" opacity="0.75" />
+
+    <!-- Eye -->
+    <circle cx="180" cy="195" r="13" fill="#f59e0b" />
+    <circle cx="180" cy="195" r="7" fill="#0f172a" />
+  </g>
+</svg>

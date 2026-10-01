@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="amberGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="25%" stop-color="#b45309"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <linearGradient id="rubberPipette" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="dropLabel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="dropShadow2" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bgGrad2)"/>
+  
+  <g filter="url(#dropShadow2)" transform="translate(145, 30)">
+    <!-- Rubber Bulb -->
+    <path d="M 80 15 Q 110 0 130 15 Q 145 35 135 60 L 75 60 Q 65 35 80 15 Z" fill="url(#rubberPipette)"/>
+    <!-- Ring Collar -->
+    <rect x="65" y="60" width="80" height="20" rx="3" fill="#cbd5e1"/>
+    <rect x="68" y="80" width="74" height="15" fill="#94a3b8"/>
+    
+    <!-- Amber Bottle Body -->
+    <path d="M 70 95 L 70 120 Q 70 135 40 155 L 40 400 Q 40 420 60 420 L 150 420 Q 170 420 170 400 L 170 155 Q 140 135 140 120 L 140 95 Z" fill="url(#amberGlass)"/>
+    
+    <!-- Label -->
+    <rect x="41" y="170" width="128" height="215" rx="3" fill="url(#dropLabel)"/>
+    <rect x="41" y="170" width="128" height="10" fill="#f59e0b"/>
+    
+    <!-- Icon -->
+    <circle cx="105" cy="215" r="20" fill="#ffffff"/>
+    <path d="M 105 200 Q 117 215 105 227 Q 93 215 105 200 Z" fill="#d97706"/>
+    
+    <!-- Text -->
+    <text x="105" y="255" font-family="Arial, sans-serif" font-weight="900" font-size="12" fill="#ffffff" text-anchor="middle">MULTIVITAMIN</text>
+    <text x="105" y="272" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#fbbf24" text-anchor="middle">DROPS</text>
+    
+    <rect x="53" y="285" width="104" height="18" rx="9" fill="#ffffff"/>
+    <text x="105" y="298" font-family="Arial, sans-serif" font-weight="bold" font-size="9" fill="#047857" text-anchor="middle">FOR AQUACULTURE</text>
+    
+    <text x="105" y="330" font-family="Arial, sans-serif" font-size="9" fill="#ecfdf5" text-anchor="middle">Concentrated Oral Liquid</text>
+    <text x="105" y="348" font-family="Arial, sans-serif" font-weight="bold" font-size="10" fill="#ffffff" text-anchor="middle">100 ml Dropper</text>
+    
+    <!-- Glass Specular Highlight -->
+    <path d="M 48 160 L 58 160 L 58 405 L 48 405 Z" fill="#ffffff" opacity="0.3"/>
+  </g>
+</svg>

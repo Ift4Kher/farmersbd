@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+    <linearGradient id="pondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5d0a9" />
+      <stop offset="100%" stop-color="#e5b887" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Sky & Water Landscape Background -->
+  <rect width="600" height="400" fill="url(#skyGrad)" rx="20" />
+  
+  <!-- Green Hills -->
+  <path d="M0 240 Q 150 180 300 230 T 600 200 L 600 400 L 0 400 Z" fill="#15803d" fill-opacity="0.25" />
+  <path d="M0 260 Q 200 210 400 250 T 600 240 L 600 400 L 0 400 Z" fill="#166534" fill-opacity="0.35" />
+  
+  <!-- Fish Pond Water -->
+  <path d="M0 280 Q 300 250 600 280 L 600 400 L 0 400 Z" fill="url(#pondGrad)" />
+  <!-- Water Waves -->
+  <path d="M50 320 Q 150 310 250 320 T 450 320" stroke="#ffffff" stroke-width="2" stroke-opacity="0.4" fill="none" />
+  <path d="M100 350 Q 250 340 400 350 T 550 350" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" fill="none" />
+
+  <!-- Smiling Fish Farmer (Center Body) -->
+  <g filter="url(#shadow)" transform="translate(300, 240)">
+    <!-- Body / Shirt -->
+    <path d="M-80 160 C-80 90 -50 70 0 70 C 50 70 80 90 80 160 Z" fill="url(#shirtGrad)" />
+    <!-- Collar -->
+    <path d="M-25 70 L 0 100 L 25 70 L 15 70 L 0 85 L -15 70 Z" fill="#ffffff" fill-opacity="0.9" />
+
+    <!-- Neck -->
+    <rect x="-18" y="45" width="36" height="30" rx="8" fill="url(#skinGrad)" />
+
+    <!-- Head -->
+    <ellipse cx="0" cy="15" rx="38" ry="44" fill="url(#skinGrad)" />
+    <!-- Hair -->
+    <path d="M-38 10 C-38 -30 38 -30 38 10 C 35 -15 -35 -15 -38 10 Z" fill="#1e293b" />
+    
+    <!-- Ears -->
+    <circle cx="-38" cy="15" r="8" fill="url(#skinGrad)" />
+    <circle cx="38" cy="15" r="8" fill="url(#skinGrad)" />
+
+    <!-- Smiling Eyes & Eyebrows -->
+    <path d="M-22 0 Q -14 -8 -6 0" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M6 0 Q 14 -8 22 0" stroke="#1e293b" stroke-width="3" stroke-linecap="round" fill="none" />
+    <!-- Eyebrows -->
+    <path d="M-24 -8 Q -14 -14 -4 -8" stroke="#1e293b" stroke-width="2.5" fill="none" />
+    <path d="M4 -8 Q 14 -14 24 -8" stroke="#1e293b" stroke-width="2.5" fill="none" />
+
+    <!-- Nose -->
+    <path d="M0 5 Q 4 14 -4 15" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Big Happy Smile -->
+    <path d="M-20 22 Q 0 42 20 22 Z" fill="#be123c" />
+    <path d="M-18 22 Q 0 30 18 22 Z" fill="#ffffff" /> <!-- Teeth -->
+    <!-- Dimples -->
+    <path d="M-24 20 Q -26 25 -22 28" stroke="#d97706" stroke-width="2" fill="none" />
+    <path d="M24 20 Q 26 25 22 28" stroke="#d97706" stroke-width="2" fill="none" />
+
+    <!-- Farmer Straw Hat / Cap -->
+    <path d="M-60 0 C-60 -25 -30 -40 0 -40 C 30 -40 60 -25 60 0 Z" fill="#d97706" />
+    <ellipse cx="0" cy="0" rx="70" ry="12" fill="#b45309" />
+    <ellipse cx="0" cy="-2" rx="66" ry="9" fill="#f59e0b" />
+
+    <!-- Arms Holding the Fish -->
+    <!-- Left Arm -->
+    <path d="M-70 100 Q -90 120 -50 135" stroke="url(#skinGrad)" stroke-width="24" stroke-linecap="round" fill="none" />
+    <!-- Right Arm -->
+    <path d="M70 100 Q 90 120 50 135" stroke="url(#skinGrad)" stroke-width="24" stroke-linecap="round" fill="none" />
+
+    <!-- Big Fresh Fish Held In Hands -->
+    <g transform="translate(0, 125)">
+      <!-- Fish Body -->
+      <path d="M-110 0 Q 0 -45 110 0 Q 0 45 -110 0 Z" fill="url(#fishGrad)" stroke="#475569" stroke-width="2" />
+      <!-- Fish Scales Texture -->
+      <path d="M-40 -15 Q -30 0 -40 15 M-10 -20 Q 0 0 -10 20 M20 -20 Q 30 0 20 20 M50 -15 Q 60 0 50 15" stroke="#ffffff" stroke-width="2" stroke-opacity="0.5" fill="none" />
+      <!-- Fish Belly Highlight -->
+      <path d="M-90 5 Q 0 35 90 5" fill="#f8fafc" fill-opacity="0.6" />
+      <!-- Fish Tail Fin -->
+      <path d="M100 0 L 135 -30 L 120 0 L 135 30 Z" fill="#64748b" stroke="#334155" stroke-width="1.5" />
+      <!-- Fish Dorsal Fin -->
+      <path d="M-30 -28 Q 10 -50 40 -25 Z" fill="#475569" />
+      <!-- Fish Eye -->
+      <circle cx="-85" cy="-8" r="7" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+      <circle cx="-87" cy="-8" r="3.5" fill="#0f172a" />
+      <circle cx="-88" cy="-10" r="1.5" fill="#ffffff" />
+      <!-- Fish Mouth -->
+      <path d="M-110 0 Q -105 8 -100 3" stroke="#1e293b" stroke-width="2" fill="none" />
+      <!-- Water Droplets Splashing -->
+      <circle cx="-60" cy="25" r="4" fill="#38bdf8" fill-opacity="0.8" />
+      <circle cx="40" cy="-30" r="5" fill="#38bdf8" fill-opacity="0.8" />
+      <circle cx="80" cy="28" r="3" fill="#38bdf8" fill-opacity="0.8" />
+    </g>
+
+    <!-- Hands Gripping Fish -->
+    <circle cx="-60" cy="125" r="14" fill="url(#skinGrad)" />
+    <circle cx="50" cy="125" r="14" fill="url(#skinGrad)" />
+  </g>
+
+  <!-- Success Floating Badge -->
+  <g transform="translate(30, 30)" filter="url(#shadow)">
+    <rect x="0" y="0" width="220" height="42" rx="21" fill="#ffffff" fill-opacity="0.95" stroke="#0284c7" stroke-width="1.5" />
+    <circle cx="21" cy="21" r="13" fill="#10b981" />
+    <path d="M15 21 L19 25 L27 16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="44" y="26" font-family="'Hind Siliguri', 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#0369a1">সফল ও আনন্দিত খামারি</text>
+  </g>
+</svg>

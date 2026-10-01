@@ -1,0 +1,315 @@
+/* ============================================================
+   FarmersBD — Search Page UI
+   ============================================================ */
+
+body {
+    background-color: #f0f9ff;
+}
+
+.search-page-wrapper {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0 120px 0;
+    background: #f0f9ff;
+    background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+}
+
+.search-page-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Header */
+.search-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.search-subtitle {
+    font-size: 1.25rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Category Tabs */
+.search-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-tab {
+    cursor: pointer;
+    position: relative;
+}
+
+.search-tab input[type="radio"] {
+    display: none;
+}
+
+.search-tab-content {
+    background: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    color: #475569;
+    font-weight: 700;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.search-tab-icon {
+    font-size: 2rem;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.search-tab:hover .search-tab-content {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.1);
+}
+
+/* Active Tab State */
+.search-tab input[type="radio"]:checked + .search-tab-content {
+    border-color: #38bdf8;
+    color: #0284c7;
+    background: #f0f9ff;
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.15);
+}
+
+.search-tab input[type="radio"]:checked + .search-tab-content .search-tab-icon {
+    color: #0284c7;
+}
+
+.search-tab input[type="radio"]:checked + .search-tab-content .search-tab-indicator {
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #38bdf8;
+}
+
+/* Search Form */
+.search-form {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.search-input-group {
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px 25px;
+    box-shadow: 0 10px 40px rgba(14, 165, 233, 0.15), 0 0 0 4px rgba(224, 242, 254, 0.5);
+    border: 1px solid #bae6fd;
+    transition: all 0.3s ease;
+}
+
+.search-input-group:focus-within {
+    box-shadow: 0 10px 40px rgba(14, 165, 233, 0.2), 0 0 0 4px rgba(186, 230, 253, 0.6);
+    border-color: #7dd3fc;
+}
+
+.search-input-icon {
+    font-size: 1.4rem;
+    color: #0284c7;
+    margin-right: 15px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.15rem;
+    color: #334155;
+    padding: 10px 0;
+}
+
+.search-input::placeholder {
+    color: #94a3b8;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+}
+
+/* Popular Searches */
+.search-popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popular-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.popular-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.popular-tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.popular-tag i {
+    font-size: 1.1rem;
+}
+
+.popular-tag:hover {
+    background: #bae6fd;
+    color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.1);
+}
+
+/* Background Decor */
+.search-bg-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.search-wave {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px; /* Fix for whitespace below SVG */
+}
+
+/* "সুস্থ মাছ সমৃদ্ধ কৃষি" Text Decoration */
+.search-page-wrapper::before {
+    content: 'সুস্থ মাছ\A সমৃদ্ধ কৃষি';
+    white-space: pre;
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0284c7;
+    transform: rotate(-10deg);
+    opacity: 0.7;
+    z-index: 5;
+    text-align: center;
+    font-family: inherit;
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 5px;
+}
+
+/* Swiggle Top Left Decoration */
+.search-page-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 5%;
+    width: 60px;
+    height: 10px;
+    border-top: 2px solid #38bdf8;
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-title {
+        font-size: 2rem;
+    }
+    .search-subtitle {
+        font-size: 1rem;
+    }
+    .search-input-group {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .search-input-group:focus-within {
+        box-shadow: none;
+    }
+    .search-input {
+        background: #fff;
+        width: 100%;
+        border-radius: 50px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        border: 1px solid #bae6fd;
+        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.1);
+    }
+    .search-input-icon {
+        display: none;
+    }
+    .search-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .search-tab-content {
+        min-width: 100px;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    .search-tab-icon {
+        font-size: 1.5rem;
+    }
+    .search-page-wrapper::before,
+    .search-page-wrapper::after {
+        display: none;
+    }
+}

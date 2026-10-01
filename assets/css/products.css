@@ -1,0 +1,369 @@
+/* =========================================
+   Products Page UI Redesign
+   ========================================= */
+
+/* Hero Banner */
+.products-hero-banner {
+    background: linear-gradient(90deg, rgba(235, 246, 255, 0.95) 0%, rgba(235, 246, 255, 0.88) 34%, rgba(235, 246, 255, 0.35) 62%, rgba(235, 246, 255, 0) 88%),
+                url('../images/hero/products_banner.jpg?v=2') no-repeat right center;
+    background-size: cover;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 3.5rem 0;
+    overflow: hidden;
+}
+.products-hero-banner::before {
+    display: none;
+}
+
+/* Sidebar Categories */
+.sidebar-cat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+    padding: 1rem 0;
+}
+.sidebar-cat-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    padding: 0 1.2rem 1rem;
+    border-bottom: 1px solid #eef2f6;
+    margin-bottom: 0.5rem;
+}
+.sidebar-cat-link {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+.sidebar-cat-link:hover {
+    background: #f8fafc;
+}
+.sidebar-cat-link.active {
+    background: #026ca6;
+    color: #ffffff;
+    border-radius: 8px;
+    margin: 0 0.5rem;
+    padding: 0.8rem 0.7rem;
+}
+.sidebar-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #026ca6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.8rem;
+    flex-shrink: 0;
+}
+.sidebar-cat-link.active .sidebar-icon-wrap {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+.sidebar-cat-link .bi-chevron-right {
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+.sidebar-cat-link.active .bi-chevron-right {
+    color: #ffffff;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: #cdebfd url('../images/hero/promo_banner_clean.png?v=1') no-repeat right center;
+    background-size: cover;
+    border-radius: 16px;
+    padding: 2.2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+}
+.promo-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+}
+.promo-banner-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0b3c66;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+}
+.promo-banner-sub {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #275273;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+    max-width: 380px;
+}
+.btn-promo-cta {
+    background: #024b86;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.55rem 1.6rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(2, 75, 134, 0.25);
+    transition: all 0.2s ease;
+}
+.btn-promo-cta:hover {
+    background: #013763;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(2, 75, 134, 0.35);
+}
+.promo-features-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.4rem;
+}
+.promo-badge-item {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0b3c66;
+}
+.promo-badge-item i {
+    font-size: 1.05rem;
+    color: #024b86;
+    margin-right: 0.4rem;
+}
+
+/* Feature Grid Cards */
+.feature-mini-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    height: 100%;
+    border: 1px solid #f1f5f9;
+}
+.feature-mini-icon {
+    width: 40px;
+    height: 40px;
+    color: #026ca6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.feature-mini-text h6 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+.feature-mini-text p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Product Card Specifics */
+.ui-product-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    padding: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.ui-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+.ui-badge-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    z-index: 2;
+}
+.ui-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0px;
+}
+.ui-badge.bestseller { background: #ef4444; }
+.ui-badge.new { background: #22c55e; }
+.ui-badge.popular { background: #f59e0b; }
+
+.ui-wishlist-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    z-index: 2;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+}
+.ui-wishlist-btn:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.ui-product-img {
+    height: 160px;
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.ui-product-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #026ca6;
+    margin-bottom: 0.2rem;
+}
+.ui-product-sub {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-bottom: 0.8rem;
+}
+.ui-product-price {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0ea5e9;
+    margin-bottom: 0.5rem;
+}
+
+/* Bottom Row of Product Card */
+.ui-product-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.ui-product-rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+.ui-product-rating i {
+    color: #facc15;
+    margin-right: 0.3rem;
+}
+.btn-add-cart-ui {
+    background: #0ea5e9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+.btn-add-cart-ui:hover {
+    background: #0284c7;
+    color: #fff;
+}
+
+@media (max-width: 575.98px) {
+    .ui-product-card {
+        padding: 0.65rem;
+        border-radius: 10px;
+    }
+    .ui-badge-container {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    .ui-badge {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.6rem;
+    }
+    .ui-wishlist-btn {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 26px;
+        height: 26px;
+        font-size: 0.75rem;
+    }
+    .ui-product-img {
+        height: 110px;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem;
+    }
+    .ui-product-title {
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .ui-product-sub {
+        font-size: 0.7rem;
+        margin-bottom: 0.4rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .ui-product-price {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+    .ui-product-bottom-row {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+    .ui-product-rating {
+        font-size: 0.7rem;
+    }
+    .btn-add-cart-ui {
+        width: 100%;
+        font-size: 0.72rem;
+        padding: 0.35rem 0.5rem;
+    }
+}

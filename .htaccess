@@ -1,0 +1,92 @@
+Options -Indexes
+Options -ExecCGI
+
+# ── Security Headers ──────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ── URL Rewriting ─────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /farmersbd/
+
+    # Block direct access to sensitive directories
+    RewriteRule ^(config|includes|services|database|logs)(/.*)?$ - [F,L]
+
+    # If the requested resource exists as a file or directory, serve directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Pretty URL Rewriting
+    RewriteRule ^product/([^/]+)/?$ products/details.php?slug=$1 [QSA,L]
+    RewriteRule ^category/([^/]+)/?$ products/index.php?category=$1 [QSA,L]
+    RewriteRule ^fish/([^/]+)/?$ fish/details.php?slug=$1 [QSA,L]
+    RewriteRule ^diseases/([^/]+)/?$ diseases/details.php?slug=$1 [QSA,L]
+    RewriteRule ^disease/([^/]+)/?$ diseases/details.php?slug=$1 [QSA,L]
+    RewriteRule ^blog/([^/]+)/?$ blog/details.php?slug=$1 [QSA,L]
+    RewriteRule ^combo/([^/]+)/?$ combo.php?slug=$1 [QSA,L]
+    RewriteRule ^landing/([^/]+)/?$ landing.php?slug=$1 [QSA,L]
+    RewriteRule ^page/([^/]+)/?$ page.php?slug=$1 [QSA,L]
+    RewriteRule ^shop/?$ products/index.php [QSA,L]
+</IfModule>
+
+# ── Protect sensitive files ──────────────────────────────────
+<FilesMatch "\.(env|sql|log|bak|json|md|gitignore|sh)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Protect hidden files
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
+# ── PHP Settings ─────────────────────────────────────────────
+<IfModule mod_php.c>
+    php_flag display_errors On
+    php_flag log_errors On
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value max_execution_time 300
+    php_value memory_limit 256M
+    php_value session.cookie_httponly 1
+    php_value session.cookie_samesite Lax
+</IfModule>
+
+# Force UTF-8 encoding
+AddDefaultCharset UTF-8
+
+# ── MIME Types ─────────────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType application/json .json
+    AddType image/webp .webp
+    AddType font/woff2 .woff2
+</IfModule>
+
+# ── Compression ───────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# ── Browser Caching ───────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg  "access plus 1 month"
+    ExpiresByType image/png   "access plus 1 month"
+    ExpiresByType image/webp  "access plus 1 month"
+    ExpiresByType text/css    "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

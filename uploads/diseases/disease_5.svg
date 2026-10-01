@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#9f1239" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="0" fill="url(#bgGrad)" />
+
+  <!-- Decorative Waves / Circles -->
+  <circle cx="700" cy="80" r="180" fill="#ffffff" fill-opacity="0.05" />
+  <circle cx="100" cy="420" r="220" fill="#ffffff" fill-opacity="0.04" />
+  <path d="M0 380 Q 200 320 400 380 T 800 380 L 800 500 L 0 500 Z" fill="#ffffff" fill-opacity="0.08" />
+
+  <!-- Center Card -->
+  <rect x="60" y="50" width="680" height="400" rx="24" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" filter="url(#shadow)" />
+
+  <!-- Badge -->
+  <rect x="100" y="85" width="220" height="40" rx="20" fill="#ffffff" fill-opacity="0.9" />
+  <text x="210" y="111" font-family="'Noto Sans Bengali', 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#0f766e" text-anchor="middle">মাছের রোগ নির্দেশিকা</text>
+
+  <!-- Icon Graphic Circle -->
+  <circle cx="400" cy="220" r="75" fill="#ffffff" fill-opacity="0.95" filter="url(#shadow)" />
+  <circle cx="400" cy="220" r="68" fill="url(#bgGrad)" />
+  
+  <!-- Stylized Graphic Symbol -->
+  <g transform="translate(400, 220)">
+    <circle cx="0" cy="0" r="40" fill="#ffffff" fill-opacity="0.2" />
+    <path d="M-20 -10 Q 0 -30 20 -10 Q 30 10 0 25 Q -30 10 -20 -10 Z" fill="#ffffff" />
+    <circle cx="8" cy="-8" r="4" fill="#e11d48" />
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="345" font-family="'Noto Sans Bengali', 'Segoe UI', sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">ড্রপসি (Dropsy / পেট ফোলা)</text>
+  <text x="400" y="385" font-family="'Noto Sans Bengali', 'Segoe UI', sans-serif" font-size="18" font-weight="500" fill="#ffffff" fill-opacity="0.85" text-anchor="middle">লক্ষণ, কারণ ও দ্রুত চিকিৎসা নির্দেশিকা</text>
+
+  <!-- Branding -->
+  <text x="700" y="420" font-family="'Noto Sans Bengali', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.7" text-anchor="end">FarmersBD Smart Aqua</text>
+</svg>

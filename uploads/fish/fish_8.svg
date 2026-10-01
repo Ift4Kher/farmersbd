@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="prawnShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="blueClaws" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+
+  <g filter="url(#shadow)" transform="translate(40, 20)">
+    <!-- Long Blue Pincers / Claws (Distinctive for Golda Chingri) -->
+    <path d="M 230 240 Q 150 320 80 340 L 40 370 L 60 380 L 100 340 Z" fill="url(#blueClaws)" stroke="#0284c7" stroke-width="3" />
+    <path d="M 250 250 Q 200 360 140 400 L 110 430 L 130 440 L 160 390 Z" fill="url(#blueClaws)" stroke="#0284c7" stroke-width="3" />
+
+    <!-- Curved Segmented Prawn Body -->
+    <path d="M 220 220 C 300 170 420 180 540 220 C 600 240 660 300 680 340 L 640 340 C 600 290 520 270 420 240 C 320 230 260 250 220 220 Z" fill="url(#prawnShell)" />
+
+    <!-- Segment Lines -->
+    <g stroke="#7c2d12" stroke-width="3.5" fill="none" opacity="0.6">
+      <path d="M 300 195 Q 310 235 300 240" />
+      <path d="M 360 190 Q 370 240 360 245" />
+      <path d="M 420 195 Q 430 250 420 255" />
+      <path d="M 480 205 Q 490 265 480 275" />
+      <path d="M 540 220 Q 550 285 540 295" />
+    </g>
+
+    <!-- Rostrum / Spiny Head & Antennae -->
+    <path d="M 220 220 L 120 180 L 80 160" stroke="#f97316" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M 220 215 Q 120 120 40 80" fill="none" stroke="#fed7aa" stroke-width="2.5" />
+    <path d="M 220 210 Q 140 100 80 40" fill="none" stroke="#fed7aa" stroke-width="2.5" />
+
+    <!-- Black Eye -->
+    <circle cx="210" cy="205" r="9" fill="#0f172a" />
+    <circle cx="208" cy="203" r="3" fill="#ffffff" />
+  </g>
+</svg>

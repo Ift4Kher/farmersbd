@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0891b2" />
+      <stop offset="50%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#155e75" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="40%" stop-color="#cbd5e1" />
+      <stop offset="80%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+    <linearGradient id="finDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <circle cx="200" cy="80" r="160" fill="#ffffff" fill-opacity="0.06" />
+  <circle cx="150" cy="360" r="10" fill="#ffffff" fill-opacity="0.25" />
+  <circle cx="210" cy="200" r="16" fill="#ffffff" fill-opacity="0.18" />
+
+  <g filter="url(#shadow)" transform="translate(30, 10)">
+    <!-- Caudal Fin -->
+    <path d="M 610 240 C 670 150 740 130 750 140 C 730 240 735 270 750 340 C 720 330 660 300 610 240 Z" fill="url(#finDark)" opacity="0.9" />
+
+    <!-- Big High Dorsal Fin -->
+    <path d="M 330 110 C 390 30 460 50 490 125 Z" fill="url(#finDark)" opacity="0.9" />
+
+    <!-- Pelvic & Anal Fins -->
+    <path d="M 380 345 C 420 410 450 400 460 340 Z" fill="url(#finDark)" opacity="0.85" />
+    <path d="M 490 325 C 540 390 570 370 570 310 Z" fill="url(#finDark)" opacity="0.85" />
+
+    <!-- Deep Broad Body (Katla has a large head and thick arched back) -->
+    <path d="M 110 220 C 140 100 320 80 520 150 C 610 180 620 230 610 240 C 590 260 520 340 340 340 C 180 340 120 280 110 220 Z" fill="url(#bodyGrad)" />
+
+    <!-- Big Head Outline & Gill -->
+    <path d="M 230 140 C 265 190 265 270 230 320" fill="none" stroke="#334155" stroke-width="4" opacity="0.5" />
+
+    <!-- Upturned Mouth (Distinct for Katla) -->
+    <path d="M 110 220 Q 135 200 150 205" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Scale Pattern -->
+    <g opacity="0.2" stroke="#0f172a" stroke-width="2" fill="none">
+      <path d="M 280 150 Q 300 180 280 210 M 320 140 Q 340 170 320 200 M 360 140 Q 380 170 360 200 M 400 145 Q 420 175 400 205 M 440 155 Q 460 185 440 215" />
+      <path d="M 295 180 Q 315 210 295 240 M 335 170 Q 355 200 335 230 M 375 170 Q 395 200 375 230 M 415 175 Q 435 205 415 235 M 455 185 Q 475 215 455 245" />
+    </g>
+
+    <!-- Large Eye -->
+    <circle cx="170" cy="180" r="16" fill="#f59e0b" />
+    <circle cx="170" cy="180" r="9" fill="#0f172a" />
+    <circle cx="166" cy="176" r="3" fill="#ffffff" />
+  </g>
+</svg>

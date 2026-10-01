@@ -1,0 +1,2 @@
+ALTER TABLE diseases
+  ADD COLUMN IF NOT EXISTS scientific_name VARCHAR(200) DEFAULT NULL AFTER name;

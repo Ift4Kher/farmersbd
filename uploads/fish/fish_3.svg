@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="50%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#115e59" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="50%" stop-color="#64748b" />
+      <stop offset="85%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <circle cx="120" cy="120" r="90" fill="#ffffff" fill-opacity="0.05" />
+
+  <g filter="url(#shadow)" transform="translate(40, 25)">
+    <!-- Fan Tail -->
+    <path d="M 600 230 L 720 160 L 710 240 L 720 320 Z" fill="#475569" opacity="0.9" />
+
+    <!-- Spiny Continuous Dorsal Fin -->
+    <path d="M 260 120 L 570 140 L 550 200 Z" fill="#334155" opacity="0.9" />
+
+    <!-- Oval Compressed Body -->
+    <path d="M 130 230 C 160 130 330 110 530 160 C 610 190 620 230 600 240 C 580 260 520 330 340 330 C 180 330 140 290 130 230 Z" fill="url(#bodyGrad)" />
+
+    <!-- Distinct Tilapia Vertical Dark Stripes -->
+    <g opacity="0.4" stroke="#0f172a" stroke-width="12" stroke-linecap="round">
+      <line x1="280" y1="145" x2="275" y2="305" />
+      <line x1="330" y1="135" x2="325" y2="320" />
+      <line x1="380" y1="135" x2="375" y2="325" />
+      <line x1="430" y1="140" x2="425" y2="315" />
+      <line x1="480" y1="150" x2="475" y2="300" />
+      <line x1="530" y1="165" x2="525" y2="280" />
+    </g>
+
+    <!-- Eye & Mouth -->
+    <circle cx="190" cy="200" r="14" fill="#f59e0b" />
+    <circle cx="190" cy="200" r="7" fill="#0f172a" />
+    <path d="M 130 230 Q 145 235 155 230" fill="none" stroke="#1e293b" stroke-width="4" />
+  </g>
+</svg>
